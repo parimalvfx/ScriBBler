@@ -16,11 +16,13 @@
     <div id="main-container-div">
 
         <div class="header">
-
         	<!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
-
+            <input class="headerButtons" type="button" onclick="toggleModal('signUpModal');" value="Sign Up">
+            <input class="headerButtons" type="button" value="Sign In">
+            <a class="pageTitle">ScriBBler</a>
+            <p class="subHeading">Explore, Imagine, Create</p>
         </div>
-           
+
         <div class="postButtons">
 
         	<!-- Insert code for All Posts & Create Post button here -->
@@ -34,10 +36,24 @@
 
     </div>
 
-    <div>
-
+    <div class="modal" id="signUpModal">
     	<!-- Insert code for Sign Up modal here -->
-
+        <div class="modalContent">
+            <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
+            <h1>Get Started</h1>
+            <hr>
+            <form>
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Full Name" required>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" required>
+                <input id="signUpBtn" type="submit" value="Sign Up">
+            </form>
+        </div>
     </div>
 
     <div>
