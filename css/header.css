@@ -41,10 +41,16 @@ input[type=password] {
     background-color: #F1F1F1;
     padding: 15px 15px;
 }
-h1 {
+h1,
+h3 {
     text-align: center;
 }
-#signUpBtn {
+#signUpRedirect {
+    color: blue;
+    cursor: pointer;
+}
+#signUpBtn,
+#signInBtn {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -54,7 +60,8 @@ h1 {
     width: 100%;
     opacity: 0.9;
 }
-#signUpBtn:hover {
+#signUpBtn:hover,
+#signInBtn:hover {
  opacity:1;
 }
 .modal {
