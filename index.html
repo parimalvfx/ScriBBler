@@ -17,28 +17,54 @@
 
         <div class="header">
         	<!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+
             <input class="headerButtons" type="button" onclick="toggleModal('signUpModal');" value="Sign Up">
             <input class="headerButtons" type="button" onclick="toggleModal('signInModal');" value="Sign In">
             <a class="pageTitle">ScriBBler</a>
             <p class="subHeading">Explore, Imagine, Create</p>
+
         </div>
 
         <div class="postButtons">
 
-        	<!-- Insert code for All Posts & Create Post button here -->
-
-        </div>
+            <!-- Insert code for All Posts & Create Post button here -->
+          
+                 <input class="postButton" type="button" id="allposts" value="All Posts">
+                 <input class="postButton" type="button" onclick="toggleModal('createpost');" value="Create Post">
+         </div>
     </div>
 
-    <div>
+   <div class="modal" id="signInModal">
 
     	<!-- Insert code for Sign In modal here -->
+	
+    	<div class="modalContent">
+            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
+            <h1>Welcome Back!</h1>
+            <hr>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+                <input id="signInBtn" type="submit" value="Sign In">
+            </form>
+            <h3>Not a member?
+                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
+            </h3>
+         </div>
+       
+
+
+	    
 
     </div>
 
     <div class="modal" id="signUpModal">
     	<!-- Insert code for Sign Up modal here -->
+
         <div class="modalContent">
+
             <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
             <h1>Get Started</h1>
             <hr>
@@ -53,32 +79,36 @@
                 <input type="password" placeholder="Confirm Password" required>
                 <input id="signUpBtn" type="submit" value="Sign Up">
             </form>
-        </div>
-    </div>
 
-    <div class="modal" id="signInModal">
-    	<!-- Insert code for Create Post modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
-            <h1>Welcome Back!</h1>
-            <hr>
-            <form>
-                <label>Username</label>
-                <input type="text" placeholder="Enter Username" required>
-                <label>Password</label>
-                <input type="password" placeholder="Enter Password" required>
-                <input id="signInBtn" type="submit" value="Sign In">
-            </form>
-            <h3>Not a member?
-                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
-            </h3>
         </div>
+
+    </div>
+	
+   <div class="modal" id="createpost">
+    	<!-- Insert code for Create Post modal here -->
+
+	 
+        <div class="modalContent1">
+            <span class="modalClose" onclick="toggleModal('createpost');">&times;</span>
+     	    <h1>Pen Your Post</h1>
+            <form>
+              <label>Title:</label>
+              <input type="text" id="Title" name="Title" required>
+              <label>Content:</label>
+              <textarea id="txtarea" rows="15" cols="75" name="Content"></textarea>
+              <input id="createpostbtn" type="submit" value="Create">
+            </form>
+         </div>
+          
+
+
+
     </div>
 
 	<!-- Place all Javascript for header in this file -->
 	<script src="js\header.js"></script>
 	<!-- Place all Javascript for rest of the elements in this file -->
-    <script src="js\index.js"></script>
+       <script src="js\index.js"></script>
 
 </body>
 </html>
