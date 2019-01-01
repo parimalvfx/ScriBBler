@@ -11,13 +11,13 @@ body{
 } 
 
 /* Set a style for the rest of the elements besides the header elements on the index.html page */
-#parent {
-    display: flex;
+.postButtons {
+display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 12%;
 }
-input.postButton {
+.postButton {
     width: 100px;
     padding: 8px;
     cursor: pointer;
@@ -39,22 +39,14 @@ input.postButton {
     
 }
 
-
-.createposts::after {
-  align: center;
-  content: "";
-  clear: both;
-  display: table;
-
-
-}
 #createpostbtn {
   padding: 10px 5px;
   background-color: green;
   color: white;
   width: 10%;
   margin-top : 10px;
-  
+  margin : 0 auto;
+
 }
 
 .modalContent1 {
