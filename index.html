@@ -28,13 +28,10 @@
         <div class="postButtons">
 
             <!-- Insert code for All Posts & Create Post button here -->
-            <div id ="parent">
+          
                  <input class="postButton" type="button" id="allposts" value="All Posts">
                  <input class="postButton" type="button" onclick="toggleModal('createpost');" value="Create Post">
-            </div>
-
-
-	    </div>
+         </div>
     </div>
 
    <div class="modal" id="signInModal">
@@ -91,19 +88,17 @@
     	<!-- Insert code for Create Post modal here -->
 
 	 
-            <div class="modalContent1">
+        <div class="modalContent1">
             <span class="modalClose" onclick="toggleModal('createpost');">&times;</span>
      	    <h1>Pen Your Post</h1>
             <form>
-            <label>Title:</label>
-            <input type="text" id="Title" name="Title" required>
-            <label>Content:</label>
-            <textarea id="txtarea" rows="15" cols="75" name="Content"></textarea>
-            <div class="createposts" align="center">
-            <input id="createpostbtn" type="submit" value="Create">
-            </div>
+              <label>Title:</label>
+              <input type="text" id="Title" name="Title" required>
+              <label>Content:</label>
+              <textarea id="txtarea" rows="15" cols="75" name="Content"></textarea>
+              <input id="createpostbtn" type="submit" value="Create">
             </form>
-            </div>
+         </div>
           
 
 
@@ -113,7 +108,7 @@
 	<!-- Place all Javascript for header in this file -->
 	<script src="js\header.js"></script>
 	<!-- Place all Javascript for rest of the elements in this file -->
-    <script src="js\index.js"></script>
+       <script src="js\index.js"></script>
 
 </body>
 </html>
