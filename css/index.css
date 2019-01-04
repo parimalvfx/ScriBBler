@@ -8,16 +8,16 @@ body{
    background-size: 100% cover!important;
    overflow:hidden;
    display: block;
-} 
+}
 
 /* Set a style for the rest of the elements besides the header elements on the index.html page */
 .postButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 13%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.postButton {
+.postBtn {
     width: 100px;
     padding: 8px;
     margin: 0 5px;
@@ -40,7 +40,6 @@ body{
     resize: vertical;
     height: 300px;
 }
-
 #createPostBtn {
     background-color: #4CAF50;
     color: white;
@@ -54,9 +53,8 @@ body{
 #createPostBtn:hover {
     opacity:1;
 }
-
 .createPostModalContent {
-   background-color: #fefefe;
+    background-color: #fefefe;
     margin: 2% auto; 
     padding: 0px 50px;
     border: 1px solid #888;

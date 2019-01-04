@@ -1,4 +1,5 @@
-document.getElementById("allposts").addEventListener("click", myFunction);
-function myFunction() {
-window.location.href = 'html/bloglist.html';
+function allPosts() {
+    window.location.href = 'html/bloglist.html';
 }
+
+document.getElementById('allPosts').addEventListener('click', allPosts);
