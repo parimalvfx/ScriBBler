@@ -7,22 +7,22 @@ function editPostAction() {
         blogBody.style.border = "none";
         blogTitleNew.contentEditable = "false";
         blogTitleNew.style.border = "none";
-        button.innerHTML = "Edit";
+        button.innerHTML = 'Edit <i class="fa fa-edit"></i>';
     } else {
         blogBody.contentEditable = "true";
         blogBody.style.border = "1px solid red";
         blogTitleNew.contentEditable = "true";
         blogTitleNew.style.border = "1px solid red";
-        button.innerHTML = "Save";
+        button.innerHTML = 'Save <i class="fa fa-save"></i>';
     }
 }
 
 var likeCount = 0;
 function likePostAction() {
     likeCount++;
-    document.getElementById('likeBlogBtn').innerHTML = 'Liked!';
+    document.getElementById('likeBlogBtn').innerHTML = '<i class="fa fa-thumbs-up"></i> Liked!';
     if (likeCount == 1) {
-        document.getElementById('likeCountText').innerHTML = likeCount + ' person liked this!';
+        document.getElementById('likeCountText').innerHTML = likeCount + ' person likes this!';
     } else {
         document.getElementById('likeCountText').innerHTML = likeCount + ' people have liked this!';
     }

@@ -17,15 +17,53 @@
         <p class="subHeading">Explore, Imagine, Create</p>
     </div>
 
-    <div class="blogContent">
+    <div class="modal" id="signInModal">
+        <!-- Insert code for Sign In modal here -->
+        <div class="modalContent">
+            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
+            <h1>Welcome Back!</h1>
+            <hr>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+                <input id="signInBtn" type="submit" value="Sign In">
+            </form>
+            <h3>Not a member?
+                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
+            </h3>
+        </div>
+    </div>
 
+    <div class="modal" id="signUpModal">
+        <!-- Insert code for Sign Up modal here -->
+        <div class="modalContent">
+            <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
+            <h1>Get Started</h1>
+            <hr>
+            <form>
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Full Name" required>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" required>
+                <input id="signUpBtn" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <div class="blogContent">
         <div id="blogTitle" class="blogTite">
             <h id="blogTitleNew">The legacy of Jimi Hendrix</h>
         </div>
 
         <div class="blogAuthor">
             <!-- Insert code for Edit/Save button and  -->
-            <button id="editPostBtn" onclick="editPostAction();">Edit</button>
+            <button id="editPostBtn" onclick="editPostAction();">Edit <i class="fa fa-edit"></i></button>
             <p>Jimi</p>
         </div>
 
@@ -37,13 +75,13 @@
 
         <!-- Insert code for Like button, Comment button, Comment box here-->
         <div class="likeBlog">
-            <button id="likeBlogBtn" onclick="likePostAction();">Like</button>
+            <button id="likeBlogBtn" onclick="likePostAction();"><i class="fa fa-thumbs-up"> Like</i></button>
             <p id="likeCountText">Be the first one to like this!</p>
         </div>
 
         <div class="blogComments">
             <textarea id="userComment" placeholder="Leave a comment..."></textarea>
-            <button id="addUserComment" onclick="addUserCommentAction(userComment);">Comment</button>
+            <button id="addUserCommentBtn" onclick="addUserCommentAction(userComment);">Comment</button>
             <h4>All Comments</h4>
             <div id="userCommentList"></div>
         </div>
