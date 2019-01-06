@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <link href='..\css\post.css' rel='stylesheet' type='text/css'>
     <link href='..\css\header.css' rel='stylesheet' type='text/css'>
@@ -11,16 +12,16 @@
     <div class="header">
         <!-- Insert code for Sign Up, Sign In button here.
         Add code for "ScriBBler" heading and the sub-heading -->
-        <input class="headerButtons" type="button" onclick="toggleModal('signUpModal');" value="Sign Up">
-        <input class="headerButtons" type="button" onclick="toggleModal('signInModal');" value="Sign In">
+        <input class="headerButtons" type="button" onclick="toggleSignUpModal();" value="Sign Up">
+        <input class="headerButtons" type="button" onclick="toggleSignInModal();" value="Sign In">
         <a class="pageTitle">ScriBBler</a>
         <p class="subHeading">Explore, Imagine, Create</p>
     </div>
 
     <div class="modal" id="signInModal">
         <!-- Insert code for Sign In modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignInModal();">&times;</span>
             <h1>Welcome Back!</h1>
             <hr>
             <form>
@@ -31,15 +32,15 @@
                 <input id="signInBtn" type="submit" value="Sign In">
             </form>
             <h3>Not a member?
-                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
+                <a id="signUpRedirect" onclick="signUpModalRedirect();" href="javascript:void(0);">Sign Up</a>
             </h3>
         </div>
     </div>
 
     <div class="modal" id="signUpModal">
         <!-- Insert code for Sign Up modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignUpModal();">&times;</span>
             <h1>Get Started</h1>
             <hr>
             <form>
@@ -90,3 +91,5 @@
     <script src="..\js\post.js" defer></script>
     <script src="..\js\header.js"></script>
 </body>
+
+</html>

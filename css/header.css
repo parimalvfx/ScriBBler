@@ -15,7 +15,7 @@ input.headerButtons {
 .pageTitle {
     font-family: 'Satisfy', 'cursive';
     font-size: 50px;
-    color: darkblue;
+    color: #112FB4;
     margin: auto;
     text-decoration: none;
     margin: 10px 10px 0px 10px;
@@ -62,7 +62,7 @@ h3 {
 }
 #signUpBtn:hover,
 #signInBtn:hover {
- opacity:1;
+ opacity: 1;
 }
 .modal {
     display: none;
@@ -76,7 +76,7 @@ h3 {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
 }
-.modalContent {
+.headerModalContent {
     background-color: #fefefe;
     margin: 2% auto;
     padding: 0px 20px 20px 20px;

@@ -1,7 +1,9 @@
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('deletePostModal');
+
 function openModal(){
-    modal.style.display = "block";
+    modal.style.display = 'block';
 }
+
 function closeModal(){
-    modal.style.display = "none";
+    modal.style.display = 'none';
 }

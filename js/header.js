@@ -6,3 +6,16 @@ function toggleModal(modalID) {
         modal.style.display = '';
     }
 }
+
+function toggleSignUpModal() {
+    toggleModal('signUpModal');
+}
+
+function toggleSignInModal() {
+    toggleModal('signInModal');
+}
+
+function signUpModalRedirect() {
+    toggleSignInModal();
+    toggleSignUpModal();
+}

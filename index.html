@@ -16,8 +16,8 @@
     <div id="main-container-div">
         <div class="header">
             <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
-            <input class="headerButtons" type="button" onclick="toggleModal('signUpModal');" value="Sign Up">
-            <input class="headerButtons" type="button" onclick="toggleModal('signInModal');" value="Sign In">
+            <input class="headerButtons" type="button" onclick="toggleSignUpModal();" value="Sign Up">
+            <input class="headerButtons" type="button" onclick="toggleSignInModal();" value="Sign In">
             <a class="pageTitle">ScriBBler</a>
             <p class="subHeading">Explore, Imagine, Create</p>
         </div>
@@ -25,14 +25,14 @@
         <div class="postButtons">
             <!-- Insert code for All Posts & Create Post button here -->
             <input class="postBtn" type="button" id="allPosts" value="All Posts">
-            <input class="postBtn" type="button" onclick="toggleModal('createPostModal');" value="Create Post">
+            <input class="postBtn" type="button" onclick="toggleCreatePostModal();" value="Create Post">
          </div>
     </div>
 
    <div class="modal" id="signInModal">
         <!-- Insert code for Sign In modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignInModal();">&times;</span>
             <h1>Welcome Back!</h1>
             <hr>
             <form>
@@ -43,15 +43,15 @@
                 <input id="signInBtn" type="submit" value="Sign In">
             </form>
             <h3>Not a member?
-                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
+                <a id="signUpRedirect" onclick="signUpModalRedirect();" href="javascript:void(0);">Sign Up</a>
             </h3>
         </div>
     </div>
 
     <div class="modal" id="signUpModal">
         <!-- Insert code for Sign Up modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignUpModal();">&times;</span>
             <h1>Get Started</h1>
             <hr>
             <form>
@@ -71,9 +71,9 @@
     <div class="modal" id="createPostModal">
         <!-- Insert code for Create Post modal here -->
         <div class="createPostModalContent">
-            <span class="modalClose" onclick="toggleModal('createPostModal');">&times;</span>
+            <span class="modalClose" onclick="toggleCreatePostModal();">&times;</span>
             <h1>Pen Your Post</h1>
-            <form>
+            <form id="createPostForm">
                 <label>Title:</label>
                 <input type="text" id="postTitle">
                 <label>Content:</label>

@@ -14,8 +14,8 @@
         <div class="header">
             <!-- Insert code for Sign Up, Sign In button here.
                 Add code for "ScriBBler" heading and the sub-heading -->
-            <input class="headerButtons" type="button" onclick="toggleModal('signUpModal');" value="Sign Up">
-            <input class="headerButtons" type="button" onclick="toggleModal('signInModal');" value="Sign In">
+            <input class="headerButtons" type="button" onclick="toggleSignUpModal();" value="Sign Up">
+            <input class="headerButtons" type="button" onclick="toggleSignInModal();" value="Sign In">
             <a class="pageTitle">ScriBBler</a>
             <p class="subHeading">Explore, Imagine, Create</p>
         </div>
@@ -23,8 +23,8 @@
 
     <div class="modal" id="signInModal">
         <!-- Insert code for Sign In modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signInModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignInModal();">&times;</span>
             <h1>Welcome Back!</h1>
             <hr>
             <form>
@@ -35,15 +35,15 @@
                 <input id="signInBtn" type="submit" value="Sign In">
             </form>
             <h3>Not a member?
-                <a id="signUpRedirect" onclick="toggleModal('signInModal');toggleModal('signUpModal');" href="javascript:void(0);">Sign Up</a>
+                <a id="signUpRedirect" onclick="signUpModalRedirect();" href="javascript:void(0);">Sign Up</a>
             </h3>
         </div>
     </div>
 
     <div class="modal" id="signUpModal">
         <!-- Insert code for Sign Up modal here -->
-        <div class="modalContent">
-            <span class="modalClose" onclick="toggleModal('signUpModal');">&times;</span>
+        <div class="headerModalContent">
+            <span class="modalClose" onclick="toggleSignUpModal();">&times;</span>
             <h1>Get Started</h1>
             <hr>
             <form>
@@ -67,7 +67,7 @@
             </div>
             <div class="post-content">
                 <!-- Insert code for Trash icon here -->
-                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal()"></i>
+                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal();"></i>
                 <p class="post-title">Hello there ! This is Post 1. </p>
                 <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
 
@@ -82,7 +82,7 @@
             </div>
             <div class="post-content">
                 <!-- Insert code for Trash icon here -->
-                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal()"></i>
+                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal();"></i>
                 <p class="post-title">Hello there ! This is Post 2. </p>
                 <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
 
@@ -97,7 +97,7 @@
             </div>
             <div class="post-content">
                 <!-- Insert code for Trash icon here -->
-                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal()"></i>
+                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal();"></i>
                 <p class="post-title">Hello there ! This is Post 3. </p>
                 <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
 
@@ -112,7 +112,7 @@
             </div>
             <div class="post-content">
                 <!-- Insert code for Trash icon here -->
-                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal()"></i>
+                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal();"></i>
                 <p class="post-title">Hello there ! This is Post 4. </p>
                 <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
 
@@ -127,7 +127,7 @@
             </div>
             <div class="post-content">
                 <!-- Insert code for Trash icon here -->
-                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal()"></i>
+                <i class="fa fa-trash-o trash-icon" aria-hidden="true" onclick="openModal();"></i>
                 <p class="post-title">Hello there ! This is Post 5. </p>
                 <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
 
@@ -136,13 +136,13 @@
             </div>
         </div>
 
-        <div id="myModal" class="modal">
+        <div id="deletePostModal" class="modal">
             <!-- Insert code for delete modal here -->
             <div class="modal-content">
                 <div class="modal-body">
                     <h3>Are you sure you want to delete this post?</h3>
                     <button class="btn-modal red-btn">Yes</button>
-                    <button class="btn-modal green-btn right" onclick="closeModal()">No</button>
+                    <button class="btn-modal green-btn right" onclick="closeModal();">No</button>
                 </div>
             </div>
         </div>
