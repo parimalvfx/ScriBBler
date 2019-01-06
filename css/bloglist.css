@@ -76,7 +76,8 @@ body {
     font-size: 24px !important;
     cursor: pointer;
 }
-/** modal styles **/
+
+/* modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -92,7 +93,7 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Modal Content */
+/* modal content */
 .modal-content {
     position: relative;
     background-color: #ffffff;
@@ -108,13 +109,11 @@ body {
     font-family: 'Abel', sans-serif;
 }
 
-
-/* Add Animation */
+/* add animation */
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-
 @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
@@ -147,7 +146,7 @@ body {
     background: white !important;
 }
 
-/** media query**/
+/* media query */
 @media screen and (max-width: 992px) {
     .post-title {
         font-size: 18px;
