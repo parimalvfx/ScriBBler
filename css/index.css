@@ -51,13 +51,16 @@ body{
     font-size: 90%;
 }
 #createPostBtn:hover {
-    opacity:1;
+    opacity: 1;
 }
 .createPostModalContent {
     background-color: #fefefe;
-    margin: 2% auto; 
-    padding: 0px 50px;
+    margin: 2% auto;
+    padding: 0 20px;
     border: 1px solid #888;
     width: 65%;
     font-family: 'Abel', sans-serif;
+}
+#createPostForm {
+    padding: 0px 40px;
 }
